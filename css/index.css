@@ -199,6 +199,9 @@ img {
     font-size: 3rem;
   }
 }
+.main-navigation .nav-container p {
+  font-size: 1.4rem;
+}
 .main-navigation .nav-container .nav {
   width: 350px;
   display: flex;
@@ -227,7 +230,6 @@ img {
   padding: 20px;
 }
 .home .intro {
-  background: red;
   padding: 90px 0 10px;
   border-bottom: 2px dashed #C0C0C0;
 }
