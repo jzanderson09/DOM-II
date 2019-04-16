@@ -43,14 +43,14 @@ wholeBody.addEventListener('keydown', function colorChanger(event) {
     };
     //Christmas Mode
     if (event.key === 'c') {
-        navHeader.style.background = 'green';
+        navHeader.style.background = '#00FF00';
         navHeader.style.color = 'Maroon';
         navLinks.forEach(function(linkItem) {
             linkItem.style.color = 'Maroon';
         });
-        wholeBody.style.background = 'green';
+        wholeBody.style.background = '#00FF00';
         wholeBody.style.color = 'Maroon';
-        foot.style.background = 'green';
+        foot.style.background = '#00FF00';
         footText.style.color = 'Maroon';
     }
 });
