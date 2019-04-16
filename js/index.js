@@ -4,7 +4,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 const foot = document.querySelector('.footer');
 const footText = document.querySelector('.footer p');
 
-//mouseover
+//mouseover (opacityChanger)
 const imgs = document.querySelectorAll('img');
 imgs.forEach(function(img) {
     img.addEventListener('mouseover', function() {
@@ -15,8 +15,9 @@ imgs.forEach(function(img) {
     });
 });
 
-//keydown
-wholeBody.addEventListener('keydown', function nightMode(event) {
+//keydown (colorChanger toggle)
+wholeBody.addEventListener('keydown', function colorChanger(event) {
+    //Night Mode
     if (event.key === 'n') {
         navHeader.style.background = 'black';
         navHeader.style.color = 'white';
@@ -28,6 +29,7 @@ wholeBody.addEventListener('keydown', function nightMode(event) {
         foot.style.background = 'black';
         footText.style.color = 'white';
     };
+    //reset colors
     if (event.key === 'r') {
         navHeader.style.background = 'white';
         navHeader.style.color = '#212529';
@@ -39,9 +41,21 @@ wholeBody.addEventListener('keydown', function nightMode(event) {
         foot.style.background = '#FFEBCD';
         footText.style.color = '#212529';
     };
+    //Christmas Mode
+    if (event.key === 'c') {
+        navHeader.style.background = 'green';
+        navHeader.style.color = 'Maroon';
+        navLinks.forEach(function(linkItem) {
+            linkItem.style.color = 'Maroon';
+        });
+        wholeBody.style.background = 'green';
+        wholeBody.style.color = 'Maroon';
+        foot.style.background = 'green';
+        footText.style.color = 'Maroon';
+    }
 });
 
-//dblclick
+//log elements clicked to the console
 wholeBody.addEventListener('click', function(event) {
     console.log(event.target);
-})
+});
