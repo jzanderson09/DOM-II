@@ -44,18 +44,35 @@ wholeBody.addEventListener('keydown', function colorChanger(event) {
     //Christmas Mode
     if (event.key === 'c') {
         navHeader.style.background = '#00FF00';
-        navHeader.style.color = 'Maroon';
+        navHeader.style.color = 'crimson';
         navLinks.forEach(function(linkItem) {
-            linkItem.style.color = 'Maroon';
+            linkItem.style.color = 'crimson';
         });
         wholeBody.style.background = '#00FF00';
-        wholeBody.style.color = 'Maroon';
+        wholeBody.style.color = 'crimson';
         foot.style.background = '#00FF00';
-        footText.style.color = 'Maroon';
+        footText.style.color = 'crimson';
     }
 });
 
-//log elements clicked to the console
-wholeBody.addEventListener('click', function(event) {
-    console.log(event.target);
+
+
+//under construction prompt
+//Uses preventDefault() to stop the href while letting
+//the prompt still display.
+navLinks[0].addEventListener('click', function(event) {
+    event.preventDefault();
 });
+navLinks[1].addEventListener('click', function(event) {
+    event.preventDefault();
+    alert('Sorry, this page is under construction!');
+});
+navLinks[2].addEventListener('click', function(event) {
+    event.preventDefault();
+    alert('Sorry, this page is under construction!');
+});
+navLinks[3].addEventListener('click', function(event) {
+    event.preventDefault();
+    alert('Sorry, this page is under construction!');
+});
+
